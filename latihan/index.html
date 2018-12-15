@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coba</title>
+
+<script type="text/javascript">
+	function getip(){
+		window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;//compatibility for Firefox and chrome
+		var pc = new RTCPeerConnection({iceServers:[]}), noop = function(){};      
+		pc.createDataChannel('');//create a bogus data channel
+		pc.createOffer(pc.setLocalDescription.bind(pc), noop);// create offer and set local description
+		pc.onicecandidate = function(ice){
+			if (ice && ice.candidate && ice.candidate.candidate){
+				var myIP = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/.exec(ice.candidate.candidate)[1];
+				var ip=myIP.substring(0,8);
+  				if (myIP=='192.168.3.251'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH : Mas Ary';
+  				}else if (myIP=='192.168.3.78'){
+  					document.getElementById("coba").innerHTML = ' DIAKSES OLEH : Edy Santoso';
+  				}
+  				else if (myIP=='192.168.3.20'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH Mas Dany';
+  				}else if (ip=='10.17.62'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLDA JAWA TIMUR';
+  				}else if (ip=='10.17.12'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES LUMAJANG';
+  				}else if (ip=='10.17.35'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES BANGKALAN';
+  				}else if (ip=='10.17.17'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRESTA KEDIRI';
+  				}else if (ip=='10.17.7.'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRESTA MALANG';
+  				}else if (ip=='10.17.5.'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRESTA SIDOARJO';
+  				}else if (ip=='10.17.34'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES PAMEKASAN';
+  				}else if (ip=='10.17.42'){
+  					document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRESTA MOJOKERTO';
+  				}
+
+  				//baris 2
+
+  				else if  (ip=='10.17.30'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRESTABES SURABAYA';
+                }else if  (ip=='10.17.40'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRESTA PASURUAN';
+                }else if  (ip=='10.17.41'){
+                	document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES BLITAR';
+                }else if  (ip=='10.17.15'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES JEMBER';
+                }else if  (ip=='10.17.33'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES JOMBANG';
+                }else if  (ip=='10.17.13'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES BONDOWOSO';
+                }else if  (ip=='10.17.26'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES MAGETAN';
+                }
+                
+                //baris 3
+
+                else if  (ip=='10.17.36'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES SAMPANG';
+                }else if  (ip=='10.17.40'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES NGAWI';
+                }else if  (ip=='10.17.28'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES PACITAN';
+                }else if  (ip=='10.17.27'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES PONOROGO';
+                }else if  (ip=='10.17.20'){
+                    document.getElementById("coba").innerHTML =  'DIAKSES OLEH POLRES TULUNGAGUNG';
+                }else if  (ip=='10.17.31'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES LAMONGAN';
+                }else if  (ip=='10.17.30'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES TUBAN';
+
+                }
+
+                //baris 4
+
+                else if  (ip=='10.17.37'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES SUMENEP';
+                }else if   (ip=='10.17.8.'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES MALANG';
+                }else if   (ip=='10.17.22'){
+                	document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES TRENGGALEK';     	
+                }else if   (ip=='10.17.6.'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES GRESIK';
+                }else if   (ip=='10.17.23.'){
+                    document.getElementById('coba').innerHTML = 'DIAKSES OLEH POLRESTA MADIUN';
+                }else if   (ip=='10.17.16'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES BANYUWANGI';
+
+                }else if   (ip=='10.17.14'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES SITUBONDO';
+
+                }
+                
+                //baris 5
+
+                else if   (ip=='10.17.29'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES BOJONEGORO';
+                }else if   (ip=='10.17.39'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRESTA PROBOLINGGO';
+                }else if   (ip=='10.17.38'){
+                	document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES TANJUNG PERAK';
+                }else if   (ip=='10.17.32'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES MOJOKERTO';
+                }else if   (ip=='10.17.10'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES PROBOLINGGO';
+                }else if   (ip=='10.17.19'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES BLITAR';
+
+                }else if   (ip=='10.17.18'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES KEDIRI';
+
+                }
+
+                //baris 6
+
+                else if   (ip=='10.17.11'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES PASURUAN';
+                }else if   (ip=='10.17.9.'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES BATU';
+                }else if   (ip=='10.17.24'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES MADIUN';
+                }else if   (ip=='10.17.21'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLRES NGANJUK';
+                }else if   (ip=='10.17.49'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH POLAIR';
+                }else if   (ip=='10.17.51'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH SPN MOJOKERTO';
+
+                }else if   (ip=='10.17.63'){
+                    document.getElementById("coba").innerHTML = 'DIAKSES OLEH BIRMOB';
+
+                }else document.getElementById("coba").innerHTML = 'DIAKSES DARI IP '+myIP ;                 
+
+
+
+
+  				pc.onicecandidate = noop;
+ 			}
+		};
+	}
+	</script>
+
+
+
+</head>
+
+
+
+
+<body>
+
+	<div id='coba'></div>
+
+<script type="text/javascript">
+	getip();
+
+</script>
+
+</body>
+</html>
